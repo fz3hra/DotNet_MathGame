@@ -22,7 +22,6 @@ namespace MathMenu
     public class Game
     {
         private static readonly Random random = new Random();
-        int result;
 
         public enum MenuChoices
         {
@@ -51,13 +50,11 @@ namespace MathMenu
         private static void DisplayMenu()
         {
             Console.WriteLine("Welcome to Math Game!\n Please Choose an option for calcutation");
-            var menuItemNumber = 1;
             foreach (MenuChoices choice in Enum.GetValues(typeof(MenuChoices)))
             {
                 if (choice != MenuChoices.Unknown)
                 {
                     Console.WriteLine($"{choice}");
-                    menuItemNumber++;
                 }
                 
             }
@@ -81,29 +78,57 @@ namespace MathMenu
                     break;
             }
         }
+
+        private (int num1, int num2) GetRandomNumber()
+        {
+            int num1 = random.Next(0, 101);
+            int num2 = random.Next(1, 101);
+            return (num1, num2);
+        }
         
         private (int num1, int num2) GenerateNumbers(MenuChoices choice)
         {
-            // int num1 = random.Next(0, 101);
-            // int num2 = random.Next(1, 101); // For division, avoid 0
-            // return (num1, num2);
             if (choice == MenuChoices.Division)
             {
                 int num1, num2;
                 do
                 {
-                    num1 = random.Next(0, 101);
-                    num2 = random.Next(1, 101); // Avoid 0 for division
+                    (num1, num2) = GetRandomNumber();
                 } while (num1 % num2 != 0 || num1 < num2); // Keep generating until we get clean division
         
                 return (num1, num2);
             }
             else
             {
-                int num1 = random.Next(0, 101);
-                int num2 = random.Next(1, 101);
+                var (num1, num2) = GetRandomNumber();
                 return (num1, num2);
             }
+        }
+
+        private int CalcutateNumbers(int num1, int num2, MenuChoices choice)
+        {
+            int result;
+            
+            switch (choice)
+            {
+                case MenuChoices.Addition:
+                    result = num1 + num2;
+                    break;
+                case MenuChoices.Substraction:
+                    result = num1 - num2;
+                    break;
+                case MenuChoices.Multiplication:
+                    result = num1 * num2;
+                    break;
+                case MenuChoices.Division:
+                    result = num1 / num2;
+                    break;
+                default:
+                    result = 0;
+                    break;
+            }
+
+            return result;
         }
 
         private void PlayGame(MenuChoices choice)
@@ -111,37 +136,9 @@ namespace MathMenu
             var (num1, num2) = GenerateNumbers(choice);
             
             Console.WriteLine($"{num1} {choice} {num2}");
-
-            if (choice is MenuChoices.Addition)
-            {
-                result = num1 + num2;
-            }
-            else if (choice is MenuChoices.Division)
-            {
-                result = num1 / num2;
-
-            }
-            else if (choice is MenuChoices.Multiplication)
-            {
-                result = num1 * num2;
-            }
-            else if (choice is MenuChoices.Substraction)
-            {
-                result = num1 - num2;
-            }
-            else
-            {
-                Console.WriteLine("Boom");
-            }
             
-            // result = choice switch
-            // {
-            //     MenuChoices.Addition => num1 + num2,
-            //     MenuChoices.Substraction => num1 - num2,
-            //     MenuChoices.Multiplication => num1 * num2,
-            //     MenuChoices.Division => num1 / num2,
-            //     _ => 0
-            // };
+            var result = CalcutateNumbers(num1, num2, choice);
+
             
             if (int.TryParse(Console.ReadLine(), out int userAnswer))
             {
@@ -150,7 +147,6 @@ namespace MathMenu
             }
         }
     }
-    
 }
 
 namespace Main

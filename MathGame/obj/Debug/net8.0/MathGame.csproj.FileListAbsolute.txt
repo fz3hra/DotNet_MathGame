@@ -12,3 +12,4 @@
 /Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.pdb
 /Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.genruntimeconfig.cache
 /Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/ref/MathGame.dll
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.sourcelink.json
