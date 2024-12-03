@@ -1,0 +1,14 @@
+/Users/fz3hra/RiderProjects/MathGame/MathGame/bin/Debug/net8.0/MathGame
+/Users/fz3hra/RiderProjects/MathGame/MathGame/bin/Debug/net8.0/MathGame.deps.json
+/Users/fz3hra/RiderProjects/MathGame/MathGame/bin/Debug/net8.0/MathGame.runtimeconfig.json
+/Users/fz3hra/RiderProjects/MathGame/MathGame/bin/Debug/net8.0/MathGame.dll
+/Users/fz3hra/RiderProjects/MathGame/MathGame/bin/Debug/net8.0/MathGame.pdb
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.AssemblyInfoInputs.cache
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.AssemblyInfo.cs
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.csproj.CoreCompileInputs.cache
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.dll
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/refint/MathGame.dll
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.pdb
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/MathGame.genruntimeconfig.cache
+/Users/fz3hra/RiderProjects/MathGame/MathGame/obj/Debug/net8.0/ref/MathGame.dll
